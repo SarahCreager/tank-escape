@@ -1,0 +1,113 @@
+
+/* --------Global Styling-------*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E4F6FF;
+}
+
+/* --------Header Styling-------*/
+
+header h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 450%;
+  padding-bottom: 8%;
+  padding-top: 8%;
+  letter-spacing: 2px;
+  color: #4D6784;
+}
+
+/* --------Tank Styling-------*/
+
+#game {
+  width: 800px;
+  height: 400px;
+  background-image: url('./img/fishTank.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border: 10px solid #777576;
+  border-radius: 8px;
+  box-shadow: 8px 10px 8px #a7a6a6;
+  margin: auto;
+}
+
+/* --------Shark Styling-------*/
+
+#block{
+  width: 180px;
+  height: 180px;
+  background-image: url('./img/sharkCharacter.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  position: relative;
+  top: 150px; /*game height - character height - block height (200 - 50 - 20)*/
+  left: 620px; /*game width - block width (500 - 20)*/
+  animation: block 1.5s infinite linear;
+}
+
+/* --------Shark Animation-------*/
+
+/* makes block slide from left to right */
+/* @keyframes block{
+  0%{left: 500px} 
+  100%{left: -20px}
+} */
+
+/* --------Character Styling-------*/
+
+#character{
+  width: 100px;
+  height: 100px;
+  background-image: url('./img/turtleCharacter.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  position: relative;
+  top: 300px; /*game height - character height (400 - 100)*/
+}
+
+/* --------Character Animation-------*/
+
+/* jump animation will make the character (targeting the top property from the character div above) jump up 50px and then back down.*/
+
+@keyframes jump{
+  0%{top: 300px;}
+  30%{top: 50px;}
+  70%{top: 50px;}
+  100%{top: 300px;}
+}
+
+/* animate class is created in script.js and applies the jump animation.*/
+
+.animate{
+  animation: jump 700ms ease-out;
+}
+
+/* --------Instruction Styling-------*/
+
+#instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#instructions h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 250%;
+  padding-top: 8%;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  color: #EF876B;
+}
+
+#instructions ol {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 150%;
+  color: #595954;
+}
