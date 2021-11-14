@@ -7,6 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #E4F6FF;
+  background-image: url('./img/woodBackground.png');
+  background-repeat: no-repeat;
+  background-size: 200%;
 }
 
 /* --------Header Styling-------*/
@@ -17,7 +20,7 @@ header h1 {
   padding-bottom: 8%;
   padding-top: 8%;
   letter-spacing: 2px;
-  color: #4D6784;
+  color: #668D3D;
 }
 
 /* --------Tank Styling-------*/
@@ -33,59 +36,66 @@ header h1 {
   border-radius: 8px;
   box-shadow: 8px 10px 8px #a7a6a6;
   margin: auto;
+  position: relative;
 }
 
 /* --------Shark Styling-------*/
 
 #block{
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 160px;
   background-image: url('./img/sharkCharacter.png');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
   position: relative;
-  top: 150px; /*game height - character height - block height (200 - 50 - 20)*/
-  left: 620px; /*game width - block width (500 - 20)*/
-  animation: block 1.5s infinite linear;
+  top: 160px; /*game height - character height - block height (400 - 70 - 160) 10 different*/ 
+  left: 650px;  /*game width - block width (800 - 150) */
 }
 
 /* --------Shark Animation-------*/
 
-/* makes block slide from left to right */
-/* @keyframes block{
-  0%{left: 500px} 
-  100%{left: -20px}
-} */
+/* makes shark slide from left to right */
+@keyframes block{
+  0%{left: 670px} 
+  100%{left: -50px}
+}
+
+/* runGame class is created in script.js and applies the shark animation starting the game.*/
+
+.runGame{
+  animation: block 1s infinite linear;;
+}
 
 /* --------Character Styling-------*/
 
 #character{
   width: 100px;
-  height: 100px;
+  height: 70px;
   background-image: url('./img/turtleCharacter.png');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
   position: relative;
-  top: 300px; /*game height - character height (400 - 100)*/
+  top: 290px; /*game height - character height (400 - 70) */
+  left: 20px;
 }
 
 /* --------Character Animation-------*/
 
-/* jump animation will make the character (targeting the top property from the character div above) jump up 50px and then back down.*/
+/* jump animation will make the character (targeting the top property from the character div above) jump up 220px and then back down.*/
 
 @keyframes jump{
-  0%{top: 300px;}
-  30%{top: 50px;}
-  70%{top: 50px;}
-  100%{top: 300px;}
+  0%{top: 290;}
+  30%{top: 30px;}
+  70%{top: 30px;}
+  100%{top: 290;}
 }
 
 /* animate class is created in script.js and applies the jump animation.*/
 
 .animate{
-  animation: jump 700ms ease-out;
+  animation: jump 600ms ease;
 }
 
 /* --------Instruction Styling-------*/
@@ -110,4 +120,32 @@ header h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 150%;
   color: #595954;
+}
+
+button {
+  background-color: #BAB6B6;
+  border: 8px solid #777576;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18pt;
+  letter-spacing: 1px;
+  color: #FAFAFA;
+  margin-top: 2%; 
+  transition:all 0.8s ease;
+}
+
+button:hover {
+  background: #C7E394;
+}
+
+#gameOver {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 500%;
+  letter-spacing: 2px;
+  color: rgb(177, 219, 115);
+  position:absolute;
+  left: 250px;
+  bottom: 160px;
 }
