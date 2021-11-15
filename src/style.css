@@ -123,21 +123,24 @@ header h1 {
 }
 
 button {
-  background-color: #BAB6B6;
-  border: 8px solid #777576;
+  background-color: #FCBB88;
+  border: 8px solid #B75C24;
   border-radius: 8px;
   padding: 10px 20px;
   text-transform: uppercase;
   font-family: 'Bebas Neue', cursive;
   font-size: 18pt;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   color: #FAFAFA;
   margin-top: 2%; 
   transition:all 0.8s ease;
+  box-shadow: 6px 8px 6px #a7a6a6;
 }
 
 button:hover {
-  background: #C7E394;
+  background: #9CC861;
+  border: 8px solid #607B3C;
+  transform: scale(1.1);
 }
 
 #gameOver {

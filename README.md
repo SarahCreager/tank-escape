@@ -5,14 +5,14 @@ By Sarah Creager
 ## STRETCH GOALS
 
 - DONE: bug where it loses when you jump
-- change character
 - DONE: on click restart game without refreshing page
-- add bubble animations
 - DONE: click to start game first time
 - DONE: integrate keyboard instead of click
+- change character
 - track your score
-- add a pause game feature
+- add bubble animations
 - have the speed increase of sharks
+- add a pause game feature
 
 ### Resources 
 
